@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Termin buchen · Zehra Nails Aadorf</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23111'/%3E%3Ctext x='32' y='42' text-anchor='middle' font-family='Georgia' font-size='32' fill='%23f4efe8'%3EZ%3C/text%3E%3C/svg%3E">
+</head>
+<body>
+    <main class="shell">
+        <section class="studio" aria-label="Zehra Nails">
+            <header class="brand">
+                <div class="mark" aria-hidden="true"><span>Z</span></div>
+                <div>
+                    <p class="eyebrow">Nail salon</p>
+                    <h1>Zehra Nails</h1>
+                    <p class="meta">Certified Nail Artist</p>
+                </div>
+            </header>
+
+            <div class="mosaic">
+                <figure class="shot"><img src="Screenshot%202026-11-16%20141141.png" alt="French Nails by Zehra Nails"></figure>
+                <figure class="shot"><img src="Screenshot%202026-11-16%20141115.png" alt="Short pink nails by Zehra Nails"></figure>
+                <figure class="shot"><img src="Screenshot%202026-11-16%20141202.png" alt="Red nails by Zehra Nails"></figure>
+                <figure class="shot"><img src="Screenshot%202026-11-16%20141132.png" alt="White short nails by Zehra Nails"></figure>
+            </div>
+
+            <footer class="studio-foot">
+                <p data-i18n="place">8355 Aadorf, Schweiz</p>
+                <a href="https://www.instagram.com/zehra.nails/" target="_blank" rel="noopener">@zehra.nails</a>
+                <p data-i18n="price">Preise auf der Instagram-Preisliste</p>
+            </footer>
+        </section>
+
+        <section class="book" aria-labelledby="book-title">
+            <div class="book-top">
+                <p class="hours" data-i18n="hours">Mo–Fr 09:00–18:30 · Sa 09:00–16:00 · So zu</p>
+                <div class="lang" role="group" aria-label="Language">
+                    <button type="button" data-lang="de" class="is-on" aria-pressed="true">DE</button>
+                    <button type="button" data-lang="en" aria-pressed="false">EN</button>
+                </div>
+            </div>
+
+            <div id="form-panel">
+                <h2 id="book-title" data-i18n="book">Termin buchen</h2>
+                <p class="lead" data-i18n="lead">Behandlung, Tag und Uhrzeit. Dauert eine Minute.</p>
+
+                <form id="booking" novalidate>
+                    <fieldset>
+                        <legend data-i18n="service">Behandlung</legend>
+                        <div class="services">
+                            <label class="service">
+                                <input type="radio" name="service" value="short" data-minutes="75" required>
+                                <span class="service-name" data-de="Short Nails" data-en="Short Nails">Short Nails</span>
+                                <span class="service-desc" data-de="Kurzes, feines Set" data-en="A short, neat set">Kurzes, feines Set</span>
+                                <span class="service-time">75 min</span>
+                            </label>
+                            <label class="service">
+                                <input type="radio" name="service" value="french" data-minutes="90">
+                                <span class="service-name" data-de="French Nails" data-en="French Nails">French Nails</span>
+                                <span class="service-desc" data-de="Klassisch oder soft" data-en="Classic or soft French">Klassisch oder soft</span>
+                                <span class="service-time">90 min</span>
+                            </label>
+                            <label class="service">
+                                <input type="radio" name="service" value="toes" data-minutes="60">
+                                <span class="service-name" data-de="Toe Nails" data-en="Toe Nails">Toe Nails</span>
+                                <span class="service-desc" data-de="Zehennägel lackiert" data-en="Polished toe nails">Zehennägel lackiert</span>
+                                <span class="service-time">60 min</span>
+                            </label>
+                            <label class="service">
+                                <input type="radio" name="service" value="fill" data-minutes="75">
+                                <span class="service-name" data-de="Auffüllen" data-en="Refill">Auffüllen</span>
+                                <span class="service-desc" data-de="Nachfüllen, haltbar" data-en="Infill that lasts">Nachfüllen, haltbar</span>
+                                <span class="service-time">75 min</span>
+                            </label>
+                            <label class="service">
+                                <input type="radio" name="service" value="newset" data-minutes="120">
+                                <span class="service-name" data-de="Neues Set" data-en="New set">Neues Set</span>
+                                <span class="service-desc" data-de="Aufbau, ca. 3 Monate" data-en="New set, about 3 months">Aufbau, ca. 3 Monate</span>
+                                <span class="service-time">120 min</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <label class="field">
+                        <span data-i18n="date">Datum</span>
+                        <input type="date" name="date" id="date" required>
+                    </label>
+
+                    <fieldset>
+                        <legend data-i18n="time">Uhrzeit</legend>
+                        <div id="slots" class="slots" role="radiogroup" aria-label="Uhrzeit"></div>
+                        <p id="slot-note" class="slot-note" hidden></p>
+                    </fieldset>
+
+                    <div class="who">
+                        <label class="field">
+                            <span data-i18n="name">Name</span>
+                            <input type="text" name="name" id="name" required maxlength="80" autocomplete="name">
+                        </label>
+                        <label class="field">
+                            <span data-i18n="phone">Telefon</span>
+                            <input type="tel" name="phone" id="phone" required maxlength="30" autocomplete="tel" inputmode="tel" placeholder="+41 79 000 00 00">
+                        </label>
+                    </div>
+
+                    <label class="field">
+                        <span data-i18n="note">Nachricht</span>
+                        <input type="text" name="note" id="note" maxlength="300" data-i18n-placeholder="notePh" placeholder="Farbe, Länge oder Wunsch">
+                    </label>
+
+                    <p id="form-error" class="form-error" role="alert" hidden></p>
+                    <button class="submit" type="submit" data-i18n="submit">Termin anfragen</button>
+                </form>
+            </div>
+
+            <div id="done" class="done" hidden>
+                <p class="eyebrow">Zehra Nails</p>
+                <h2 data-i18n="sent">Anfrage ist drin</h2>
+                <p class="lead" data-i18n="sentLead">Der Termin ist für dich reserviert. Zehra bestätigt kurz per Nachricht.</p>
+                <dl class="receipt">
+                    <div><dt>Ref</dt><dd id="done-ref"></dd></div>
+                    <div><dt data-i18n="service">Behandlung</dt><dd id="done-service"></dd></div>
+                    <div><dt data-i18n="whenLabel">Wann</dt><dd id="done-when"></dd></div>
+                </dl>
+                <button type="button" id="again" class="ghost" data-i18n="another">Weiteren Termin</button>
+            </div>
+        </section>
+    </main>
+    <script src="assets/app.js"></script>
+</body>
+</html>
